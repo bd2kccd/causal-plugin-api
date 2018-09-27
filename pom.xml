@@ -10,21 +10,29 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
 	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencies>
 
 		<!-- pf4j plugins -->
 		<dependency>
 			<groupId>org.pf4j</groupId>
-			<artifactId>pf4j-spring</artifactId>
-			<version>0.5.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>edu.cmu</groupId>
-			<artifactId>tetrad-lib</artifactId>
-			<version>6.6.0-SNAPSHOT</version>
+			<artifactId>pf4j</artifactId>
+			<version>2.5.0-SNAPSHOT</version>
+			<!-- !!! VERY IMPORTANT -->
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>
