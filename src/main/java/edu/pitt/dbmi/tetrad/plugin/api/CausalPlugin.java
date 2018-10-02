@@ -10,6 +10,6 @@ import org.pf4j.ExtensionPoint;
  */
 public interface CausalPlugin extends ExtensionPoint {
 	
-	String getAlgorithmDescriptions();
+	public String getAlgorithmDescriptions();
 	
 }
